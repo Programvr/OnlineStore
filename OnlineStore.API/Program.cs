@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using OnlineStore.Application.Handlers;
 using OnlineStore.Infrastructure.Persistence;
 using OnlineStore.Infrastructure.Repositories;
-using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 

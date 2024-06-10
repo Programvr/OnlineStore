@@ -3,6 +3,9 @@ using OnlineStore.Domain.Entities;
 
 namespace OnlineStore.Infrastructure.Persistence
 {
+   
+    /// DbContext para la tienda en línea.
+    
     public class OnlineStoreDbContext : DbContext
     {
         public OnlineStoreDbContext(DbContextOptions<OnlineStoreDbContext> options)
@@ -10,8 +13,15 @@ namespace OnlineStore.Infrastructure.Persistence
         {
         }
 
+        
+        /// DbSet para la entidad Pedido.
+        
         public DbSet<Pedido> Pedidos { get; set; }
 
+        
+        /// Configuración del modelo de datos.
+        
+        /// Constructor de modelos para configurar las entidades y relaciones.
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Pedido>(entity =>
